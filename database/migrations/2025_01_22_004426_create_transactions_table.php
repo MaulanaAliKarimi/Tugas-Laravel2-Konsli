@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->integer('id');
             $table->integer('user_id');
-            $table->varchar('name');
+            $table->string('name');
             $table->text('address');
             $table->text('phone');
             $table->date('date');
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->integer('total');
             $table->integer('grandtotal');
             $table->integer('paytotal');
-            $table->timestamps('created_at');
+            $table->timestamps();
         });
     }
 
